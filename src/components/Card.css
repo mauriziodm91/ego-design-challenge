@@ -1,0 +1,34 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.card:hover h2 {
+  color: red;
+}
+
+.btn {
+  display: none;
+  position: absolute;
+  top: 250px;
+}
+
+.card:hover .btn {
+  display: flex;
+  background: #191919;
+  color: #fff;
+  border-radius: 40px;
+  padding: 6px 17px;
+}
+
+.card .car-photo img {
+  width: 240px;
+  height: 180px;
+  object-fit: contain;
+}
+
+.car-model {
+  margin: 0;
+}
