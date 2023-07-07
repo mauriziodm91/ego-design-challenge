@@ -1,8 +1,13 @@
+import { useNavigate } from 'react-router-dom'
 import './Card.css'
 
-const Card = ({ model, year, price, thumbnail }) => {
+const Card = ({ model, year, price, thumbnail, id }) => {
+  const navigate = useNavigate()
+  const handleNavigate = () => {
+    navigate(`detail/${id}`)
+  }
   return (
-    <div className='card'>
+    <div className='card' onClick={handleNavigate}>
       <div className='model-container'>
         <h2 className='car-model'>{model}</h2>
       </div>

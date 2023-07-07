@@ -1,4 +1,4 @@
-import { Outlet } from 'react-router-dom'
+import { Outlet, Link } from 'react-router-dom'
 import './Navigation.css'
 
 const Navigation = () => {
@@ -7,9 +7,9 @@ const Navigation = () => {
       <header className='navigation'>
         <div className='nav-links-container'>
           <div className='logo-container'>
-            <a href='#'>
+            <Link to='/'>
               <img className='logo' src='/logo.svg' alt='logo' />
-            </a>
+            </Link>
           </div>
           <nav className='nav'>
             <ul className='nav-list'>

@@ -1,0 +1,31 @@
+.hero-container {
+  display: flex;
+  align-items: center;
+  margin: 80px 150px;
+}
+
+.hero-image-container img {
+  height: 314px;
+  width: 667px;
+  object-fit: contain;
+}
+
+.hero-details-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.hero-details-container .model-name {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.hero-details-container h1 {
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 57px;
+  letter-spacing: -1px;
+  margin: 8px 0 36px 0;
+}

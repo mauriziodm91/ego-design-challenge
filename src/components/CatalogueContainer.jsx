@@ -22,6 +22,7 @@ const CatalogueContainer = () => {
               year={year}
               price={price}
               thumbnail={thumbnail}
+              id={id}
             />
           )
         })}
