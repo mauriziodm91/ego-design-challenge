@@ -5,7 +5,7 @@ import Filters from './Filters'
 import './CatalogueContainer.css'
 
 const CatalogueContainer = () => {
-  const { cars } = useContext(CarsContext)
+  const { catalogueSet } = useContext(CarsContext)
   return (
     <div className='catalogue-container'>
       <div className='cta-container'>
@@ -13,7 +13,7 @@ const CatalogueContainer = () => {
       </div>
       <Filters />
       <div className='cards-container'>
-        {cars.map((car) => {
+        {catalogueSet.map((car) => {
           const { id, name, year, price, thumbnail } = car
           return (
             <Card
