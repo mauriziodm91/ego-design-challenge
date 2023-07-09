@@ -7,7 +7,7 @@ import './Details.css'
 const Details = () => {
   const [carDetails, setCarDetails] = useState(null)
   const { car } = useParams()
-  console.log(car)
+
   useEffect(() => {
     const getDetails = async () => {
       try {
