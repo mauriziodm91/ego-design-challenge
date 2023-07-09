@@ -29,7 +29,19 @@
   font-family: 'Montserrat', sans-serif;
   text-align: center;
   padding: 9px;
-  background: #f7f7f7;
+  background: transparent;
+  border-radius: 18px;
+  border-style: none;
+  width: auto;
+  height: 31px;
+  cursor: pointer;
+}
+
+.filter-item.active {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  padding: 9px;
+  background: #dddada;
   border-radius: 18px;
   border-style: none;
   width: auto;

@@ -1,13 +1,16 @@
+import { useContext } from 'react'
+import { CarsContext } from '../context/CarsContext'
+import Select from './Select'
 import './Filters.css'
 
-const Filters = () => {
-  const filters = [
-    'Todos',
-    'Autos',
-    'Pickups y Comerciales',
-    'SUVs y Crossovers',
-  ]
+const filters = ['Todos', 'Autos', 'Pickups y Comerciales', 'SUVs y Crossovers']
 
+const Filters = () => {
+  const { activeFilter, setActiveFilter } = useContext(CarsContext)
+
+  const filterChangeHandler = (e) => {
+    setActiveFilter(e.target.name)
+  }
   return (
     <div className='filters-container'>
       <div className='filter-options'>
@@ -17,16 +20,24 @@ const Filters = () => {
         <div className='filter-list'>
           {filters.map((filter, id) => (
             <button
-              name={filter.toLowerCase()}
-              className='filter-item'
+              name={filter}
+              className={`filter-item ${
+                activeFilter === filter ? 'active' : ''
+              }`}
               key={id}
+              onClick={filterChangeHandler}
             >
               {filter}
             </button>
           ))}
         </div>
       </div>
-      <div className='select-container'>ordenar por</div>
+      <Select
+        InputProps={{
+          type: 'text',
+          placeholder: 'Ordenar por',
+        }}
+      />
     </div>
   )
 }
