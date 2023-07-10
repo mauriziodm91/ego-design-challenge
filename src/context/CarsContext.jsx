@@ -6,6 +6,8 @@ export const CarsContext = createContext({
   setActiveFilter: () => {},
   sortOption: '',
   setSortOption: () => {},
+  selectedCard: 0,
+  setSelectedCard: () => {},
 })
 
 export const CarsProvider = ({ children }) => {
@@ -13,6 +15,7 @@ export const CarsProvider = ({ children }) => {
   const [catalogueSet, setCatalogueSet] = useState([])
   const [activeFilter, setActiveFilter] = useState('Todos')
   const [sortOption, setSortOption] = useState('Nada')
+  const [selectedCard, setSelectedCard] = useState(1)
   useEffect(() => {
     const getCars = async () => {
       try {
@@ -79,6 +82,8 @@ export const CarsProvider = ({ children }) => {
     sortOption,
     setActiveFilter,
     setSortOption,
+    selectedCard,
+    setSelectedCard,
   }
   return <CarsContext.Provider value={value}>{children}</CarsContext.Provider>
 }
