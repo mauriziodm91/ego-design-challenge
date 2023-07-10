@@ -1,9 +1,13 @@
+import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { CarsContext } from '../context/CarsContext'
 import './Card.css'
 
 const Card = ({ model, year, price, thumbnail, id }) => {
+  const { setSelectedCard } = useContext(CarsContext)
   const navigate = useNavigate()
   const handleNavigate = () => {
+    setSelectedCard(id)
     navigate(`detail/${id}`)
   }
   return (
