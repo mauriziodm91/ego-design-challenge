@@ -44,8 +44,21 @@ header {
   color: inherit;
 }
 
-.nav-link:hover {
+.nav-link.active {
   color: #d0021b;
+}
+
+.nav-link.active::before {
+  content: '';
+  height: 3px;
+  width: 100%;
+  background: #d0021b;
+  position: absolute;
+  left: 0;
+  bottom: -24px;
+  opacity: 1;
+  transition: all 0.2s;
+  pointer-events: none;
 }
 
 .nav-link::after {

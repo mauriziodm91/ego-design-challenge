@@ -1,7 +1,10 @@
-import { Outlet, Link } from 'react-router-dom'
+import { useContext } from 'react'
+import { Outlet, Link, NavLink } from 'react-router-dom'
+import { CarsContext } from '../context/CarsContext'
 import './Navigation.css'
 
 const Navigation = () => {
+  const { selectedCard } = useContext(CarsContext)
   return (
     <>
       <header className='navigation'>
@@ -14,14 +17,14 @@ const Navigation = () => {
           <nav className='nav'>
             <ul className='nav-list'>
               <li className='nav-item'>
-                <a className='nav-link' href='#'>
+                <NavLink className='nav-link' to='/' end>
                   Modelos
-                </a>
+                </NavLink>
               </li>
               <li className='nav-item'>
-                <a className='nav-link' href='#'>
+                <NavLink className='nav-link' to={`/detail/${selectedCard}`}>
                   Ficha de modelo
-                </a>
+                </NavLink>
               </li>
             </ul>
           </nav>
