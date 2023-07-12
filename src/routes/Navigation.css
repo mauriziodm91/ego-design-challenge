@@ -89,6 +89,10 @@ header {
 
 .menu-container p {
   color: #191919;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
 }
 
 .menu-container img {

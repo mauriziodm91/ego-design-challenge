@@ -1,10 +1,17 @@
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import { Outlet, Link, NavLink } from 'react-router-dom'
 import { CarsContext } from '../context/CarsContext'
+import Dropdown from '../components/Dropdown'
 import './Navigation.css'
 
 const Navigation = () => {
   const { selectedCard } = useContext(CarsContext)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const handleMenu = () => {
+    setIsMenuOpen((prev) => !prev)
+  }
+
   return (
     <>
       <header className='navigation'>
@@ -29,10 +36,11 @@ const Navigation = () => {
             </ul>
           </nav>
         </div>
-        <div className='menu-container'>
+        <div className='menu-container' onClick={handleMenu}>
           <p>Menu</p>
           <img src='/hamburger.svg' alt='menu-toggle' />
         </div>
+        {isMenuOpen && <Dropdown toggleMenu={handleMenu} />}
       </header>
       <Outlet />
     </>
