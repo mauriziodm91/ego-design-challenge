@@ -40,8 +40,8 @@ const Navigation = () => {
           <p>Menu</p>
           <img src='/hamburger.svg' alt='menu-toggle' />
         </div>
-        {isMenuOpen && <Dropdown toggleMenu={handleMenu} />}
       </header>
+      {isMenuOpen && <Dropdown toggleMenu={handleMenu} />}
       <Outlet />
     </>
   )

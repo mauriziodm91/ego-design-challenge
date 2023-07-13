@@ -43,3 +43,16 @@
 .gray-section {
   background: #efeeef;
 }
+
+@media (max-width: 720px) {
+  .dropdown-container {
+    top: 70px;
+    z-index: 2;
+    display: block;
+    width: 100%;
+  }
+
+  .link-group ul {
+    margin: 0;
+  }
+}

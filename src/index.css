@@ -25,3 +25,11 @@ body {
 a {
   text-decoration: none;
 }
+
+@media (max-width: 720px) {
+  html,
+  body {
+    width: unset;
+    padding: 0 1px;
+  }
+}

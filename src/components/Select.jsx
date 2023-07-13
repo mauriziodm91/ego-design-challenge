@@ -1,20 +1,11 @@
-import { useState, useRef, useContext } from 'react'
-import { CarsContext } from '../context/CarsContext'
+import { useState, useRef } from 'react'
 import { MdKeyboardArrowDown } from 'react-icons/md'
 import './Select.css'
 
-const options = [
-  'Nada',
-  'De menor a mayor precio',
-  'De mayor a menor precio',
-  'Mas nuevos primero',
-  'Mas viejos primero',
-]
-
-const Select = ({ ContainerProps, InputProps }) => {
-  const { setSortOption, sortOption } = useContext(CarsContext)
+const Select = ({ ContainerProps, InputProps, options, setters }) => {
+  const { defaultValue, set } = setters
   const [GetIsOpenSelect, SetIsOpenSelect] = useState(false)
-  const InputReference = useRef(sortOption)
+  const InputReference = useRef(defaultValue)
 
   return (
     <div className='select-container' {...ContainerProps}>
@@ -38,7 +29,7 @@ const Select = ({ ContainerProps, InputProps }) => {
             className='select-option'
             onClick={(Event) => {
               InputReference.current.value = Event.target.outerText
-              setSortOption(Event.target.outerText)
+              set(Event.target.outerText)
               SetIsOpenSelect(false)
             }}
             key={Index}

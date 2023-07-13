@@ -36,3 +36,15 @@
 .car-model {
   margin: 0;
 }
+
+@media (max-width: 720px) {
+  .card:hover h2 {
+    color: inherit;
+  }
+  .card:hover .btn {
+    display: none;
+  }
+  .card.btn {
+    display: none;
+  }
+}

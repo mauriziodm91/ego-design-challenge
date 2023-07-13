@@ -1,5 +1,5 @@
-import './HighlightContainer.css'
 import Highlights from './Highlights'
+import './HighlightContainer.css'
 const HighlightContainer = ({ highlights }) => {
   return (
     <section className='highlights-section'>

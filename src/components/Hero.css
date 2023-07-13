@@ -29,3 +29,13 @@
   letter-spacing: -1px;
   margin: 8px 0 36px 0;
 }
+
+@media (max-width: 720px) {
+  .hero-container {
+    flex-direction: column;
+  }
+  .hero-image-container img {
+    height: 191px;
+    width: 406px;
+  }
+}

@@ -14,13 +14,15 @@
   border: none;
   border-radius: 0.25rem;
   font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
   color: #373737;
   cursor: pointer;
 }
 
 .select-icon {
   position: absolute;
-  right: 8%;
+  right: 0;
   top: 50%;
   transform: translateY(-50%) rotate(-90deg);
   font-size: 25px;
@@ -85,4 +87,10 @@
 
 .select-options::-webkit-scrollbar-thumb:hover {
   background: #8e8e83;
+}
+
+@media (max-width: 720px) {
+  .select-icon {
+    right: 0;
+  }
 }

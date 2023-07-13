@@ -19,3 +19,19 @@
   row-gap: 50px;
   padding-bottom: 20px;
 }
+
+@media (max-width: 720px) {
+  .cards-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .catalogue-container {
+    margin: 0;
+  }
+  .cta-container {
+    font-size: 25px;
+  }
+  .cta-container h1 {
+    padding: 0;
+  }
+}

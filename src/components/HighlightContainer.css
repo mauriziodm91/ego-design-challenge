@@ -42,3 +42,29 @@
   gap: 116px;
   align-items: center;
 }
+
+@media (max-width: 720px) {
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .first-child,
+  .second-child {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 0;
+  }
+  .highlight-image-container img {
+    height: 240px;
+    width: 346px;
+  }
+  .highlight-content h2 {
+    width: 300px;
+    text-align: start;
+  }
+
+  .highlight-content p {
+    width: fit-content;
+  }
+}
