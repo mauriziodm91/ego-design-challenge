@@ -24,6 +24,7 @@ body {
 
 a {
   text-decoration: none;
+  color: #191919;
 }
 
 @media (max-width: 720px) {
